@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-MY" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- GOD TIER SEO META TAGS -->
+    <title>Leafhaus | World's First Halal Canned Masala Tea - Heritage Run</title>
+    <meta name="description" content="Join the Heritage Run. Help Leafhaus sell 10,000 cans of the World's First Halal Sterilised Masala Tea. A Malaysian innovation by MMU alumni Gisnervern Arikrishnan. Support local, support charity.">
+    <meta name="keywords" content="Leafhaus, Masala Tea, Halal Masala Tea, Canned Tea Malaysia, Gisnervern Arikrishnan, MMU, Turmeric Milk, Malaysian Startup, 10000 Cans Challenge">
+    <meta name="author" content="Leafhaus Malaysia">
+    <meta name="robots" content="index, follow">
+    <!-- Canonical Tag: Tells Google this is the master copy of the page -->
+    <link rel="canonical" href="https://leafhaus.my/" />
+    
+    <!-- Open Graph / Facebook / WhatsApp Display -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leafhaus.my/">
+    <meta property="og:title" content="Leafhaus: Sip the Heritage, Support the Dream.">
+    <meta property="og:description" content="Join the mission to sell 10,000 cans of Malaysia's First Halal Canned Masala Tea. Authentically brewed, perfectly sterilised.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://leafhaus.my/">
+    <meta property="twitter:title" content="Leafhaus Heritage Run">
+    <meta property="twitter:description" content="Support the 10,000 Cans Challenge. Authentic Masala Tea in a can.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- JSON-LD SCHEMA (The Secret Sauce for Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Leafhaus Masala Tea in a Can",
+      "image": [
+        "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8"
+      ],
+      "description": "World's First Halal Sterilised Masala Tea in a Can. Authentic Indian spices, Malaysian made.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Leafhaus"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://leafhaus.my",
+        "priceCurrency": "MYR",
+        "price": "5.00",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Leafhaus Malaysia",
+      "founder": "Gisnervern Arikrishnan",
+      "url": "https://leafhaus.my",
+      "sameAs": [
+        "https://www.tiktok.com/@leafhaus",
+        "https://www.instagram.com/leafhaus"
+      ]
+    }
+    </script>
+
+    <!-- FONTS & ICONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CUSTOM STYLES & TAILWIND CONFIG -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'masala-saffron': '#D97706', /* Deep Orange */
+                        'masala-dark': '#3E2723', /* Dark Brown */
+                        'masala-gold': '#FFD700', /* Gold */
+                        'masala-cream': '#FFF8E1', /* Cream background */
+                        'masala-green': '#2E7D32', /* Leaf green */
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Lato', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF8E1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97706;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B45309;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .text-shadow-gold {
+            text-shadow: 1px 1px 2px #FFD700;
+        }
+    </style>
+</head>
+<body class="bg-masala-cream text-masala-dark font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVIGATION (ANNE'S FIX: Made it solid white initially) -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-3xl font-bold text-masala-dark tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-masala-green"></i>
+                        LEAFHAUS
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-masala-dark hover:text-masala-saffron font-semibold transition">Our Story</a>
+                    <a href="#mission" class="text-masala-dark hover:text-masala-saffron font-semibold transition">The Mission</a>
+                    <a href="#products" class="text-masala-dark hover:text-masala-saffron font-semibold transition">The Tea</a>
+                    <a href="https://wa.me/60162569149" target="_blank" class="bg-masala-saffron text-white px-6 py-2 rounded-full font-bold hover:bg-masala-dark transition transform hover:scale-105 shadow-lg border-2 border-transparent hover:border-masala-gold">
+                        Buy Now
+                    </a>
+                </div>
+                <!-- Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-masala-dark hover:text-masala-saffron focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-white shadow-xl absolute w-full" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block px-3 py-2 text-masala-dark font-bold hover:bg-masala-cream">Our Story</a>
+                <a href="#mission" class="block px-3 py-2 text-masala-dark font-bold hover:bg-masala-cream">The Mission</a>
+                <a href="#products" class="block px-3 py-2 text-masala-dark font-bold hover:bg-masala-cream">Products</a>
+                <a href="https://wa.me/60162569149" class="block px-3 py-2 text-masala-saffron font-bold hover:bg-masala-cream">Order Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (ANNE'S FIX: Added extra top padding so content doesn't hide behind navbar) -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/spices_bg.png" alt="Spices background" class="w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-masala-cream"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-masala-gold/90 text-masala-dark text-sm font-bold mb-4 tracking-widest uppercase animate-pulse-slow">
+                World's First Halal Canned Masala Tea
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-shadow leading-tight">
+                Heritage in a Can. <br>
+                <span class="text-masala-saffron">Dream in a Sip.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">
+                From a RM1 stall at MMU to a global innovation. Taste the authentic blend of premium spices and sterilised milk.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#mission" class="bg-masala-saffron text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-masala-saffron transition duration-300 shadow-xl border-2 border-masala-saffron">
+                    Join the Heritage Run
+                </a>
+                <a href="#products" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-masala-dark transition duration-300">
+                    View Flavours
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Spice Elements (Decorative) -->
+        <div class="absolute top-1/4 left-10 w-16 opacity-60 animate-float hidden md:block">
+            <i class="fa-solid fa-leaf text-green-400 text-4xl"></i>
+        </div>
+        <div class="absolute bottom-1/4 right-10 w-16 opacity-60 animate-float" style="animation-delay: 2s;">
+            <i class="fa-solid fa-mug-hot text-masala-gold text-4xl"></i>
+        </div>
+    </header>
+
+    <!-- MISSION TRACKER SECTION -->
+    <section id="mission" class="py-20 bg-white relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-masala-dark mb-4">The 10,000 Cans Challenge</h2>
+                <div class="w-24 h-1 bg-masala-saffron mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We are on a mission to sell <span class="font-bold text-masala-saffron">10,000 cartons</span> by year-end. 
+                    This isn't just business; it's about proving that a Malaysian student dream can fly high. 
+                    Profits support the "Heritage Run" charity fund for underprivileged students.
+                </p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="max-w-4xl mx-auto bg-masala-cream rounded-3xl p-8 shadow-inner border border-masala-gold/30">
+                <div class="flex justify-between mb-2 font-bold text-masala-dark">
+                    <span>Start: 0</span>
+                    <span id="current-sales-text">Loading...</span>
+                    <span>Goal: 10,000</span>
+                </div>
+                <div class="w-full bg-gray-300 rounded-full h-8 overflow-hidden relative shadow-inner">
+                    <!-- The Bar -->
+                    <div id="progress-bar" class="bg-gradient-to-r from-masala-saffron via-yellow-500 to-masala-gold h-8 rounded-full transition-all duration-1000 ease-out flex items-center justify-end pr-3" style="width: 0%">
+                        <i class="fa-solid fa-fire text-white animate-pulse"></i>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-sm text-gray-500 italic">
+                    *Live updates based on TikTok Shop & Offline Sales
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
+                <div class="p-6 rounded-xl bg-masala-cream hover:shadow-lg transition">
+                    <i class="fa-solid fa-graduation-cap text-4xl text-masala-saffron mb-4"></i>
+                    <h3 class="text-2xl font-bold text-masala-dark">MMU Origins</h3>
+                    <p class="text-gray-600">Born in Cyberjaya, brewed for the world.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-masala-cream hover:shadow-lg transition">
+                    <i class="fa-solid fa-check-circle text-4xl text-masala-green mb-4"></i>
+                    <h3 class="text-2xl font-bold text-masala-dark">100% Halal</h3>
+                    <p class="text-gray-600">Certified & Sterilised for peace of mind.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-masala-cream hover:shadow-lg transition">
+                    <i class="fa-solid fa-heart text-4xl text-red-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-masala-dark">Charity Driven</h3>
+                    <p class="text-gray-600">Supporting the next generation of students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-masala-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-masala-saffron rounded-full opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-masala-gold rounded-full opacity-20 blur-3xl"></div>
+
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1887&auto=format&fit=crop" alt="Pouring Masala Tea" class="rounded-lg shadow-2xl border-4 border-masala-gold/50 transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-4 left-4 bg-white text-masala-dark px-4 py-2 rounded font-bold shadow-lg">
+                        Since 2023
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-masala-gold">From RM1 to The World</h2>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    It started with a simple idea: selling hot Masala Tea for RM1 to students at Multimedia University to fund an MBA. But the Malaysian weather had other plans.
+                </p>
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    Founder <span class="text-white font-bold">Gisnervern Arikrishnan</span> realized students wanted it COLD. After 2 years of R&D and 16 different formulations, the Leafhaus Canned Masala Tea was born. It preserves the authentic "mamak" kick in a convenient, sterilised can.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.tiktok.com/@leafhaus" target="_blank" class="flex items-center gap-2 text-white hover:text-masala-saffron transition">
+                        <i class="fa-brands fa-tiktok text-2xl"></i> Follow the Journey
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASE -->
+    <section id="products" class="py-20 bg-masala-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-masala-dark">Our Signature Brews</h2>
+                <p class="text-gray-600 mt-4">No preservatives. Real spices. Low sugar.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-10">
+                <!-- Masala Tea Card -->
+                <div class="group relative w-full md:w-96 bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30"></div>
+                        <!-- Placeholder for Can Image -->
+                        <div class="w-32 h-48 bg-masala-dark rounded-t-lg rounded-b-lg shadow-2xl flex items-center justify-center text-white font-serif transform group-hover:scale-110 transition duration-500 relative z-10" style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%);">
+                            <div class="text-center">
+                                <p class="text-xs uppercase tracking-widest text-masala-gold">Leafhaus</p>
+                                <h3 class="text-xl font-bold mt-2">Masala<br>Tea</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold text-masala-dark mb-2">Original Masala Tea</h3>
+                        <div class="flex gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Halal</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">Low Sugar</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            A robust blend of premium black tea, cardamom, ginger, cloves, and cinnamon. Sterilised to perfection.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-masala-saffron">RM 5.00</span>
+                            <a href="https://shopee.com.my" class="bg-masala-dark text-white px-4 py-2 rounded-lg hover:bg-masala-saffron transition">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turmeric Milk Card -->
+                <div class="group relative w-full md:w-96 bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                    <div class="h-64 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30"></div>
+                         <!-- Placeholder for Can Image -->
+                         <div class="w-32 h-48 bg-yellow-500 rounded-t-lg rounded-b-lg shadow-2xl flex items-center justify-center text-white font-serif transform group-hover:scale-110 transition duration-500 relative z-10" style="background: linear-gradient(135deg, #FBC02D 0%, #F57F17 100%);">
+                            <div class="text-center">
+                                <p class="text-xs uppercase tracking-widest text-white">Leafhaus</p>
+                                <h3 class="text-xl font-bold mt-2">Turmeric<br>Milk</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-serif text-2xl font-bold text-masala-dark mb-2">Golden Turmeric Milk</h3>
+                        <div class="flex gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Halal</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Immunity</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Inspired by age-old remedies. Rich, creamy milk infused with healing turmeric and aromatic spices.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-masala-saffron">RM 5.00</span>
+                            <a href="https://shopee.com.my" class="bg-masala-dark text-white px-4 py-2 rounded-lg hover:bg-masala-saffron transition">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INGREDIENTS PARALLAX -->
+    <section class="py-20 bg-fixed bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1596710629124-e1d515a4d339?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-masala-dark/80"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="font-serif text-4xl font-bold text-masala-gold mb-12">What's Inside?</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5029/5029236.png" alt="Cardamom" class="w-16 h-16 mx-auto mb-4 filter invert opacity-80">
+                    <h4 class="font-bold text-lg">Cardamom</h4>
+                    <p class="text-sm opacity-70">For aroma</p>
+                </div>
+                <div class="text-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7395/7395048.png" alt="Ginger" class="w-16 h-16 mx-auto mb-4 filter invert opacity-80">
+                    <h4 class="font-bold text-lg">Ginger</h4>
+                    <p class="text-sm opacity-70">For the kick</p>
+                </div>
+                <div class="text-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8065/8065488.png" alt="Cinnamon" class="w-16 h-16 mx-auto mb-4 filter invert opacity-80">
+                    <h4 class="font-bold text-lg">Cinnamon</h4>
+                    <p class="text-sm opacity-70">For sweetness</p>
+                </div>
+                <div class="text-white">
+                    <img src="https://cdn-icons-png.flaticon.com/512/911/911409.png" alt="Black Tea" class="w-16 h-16 mx-auto mb-4 filter invert opacity-80">
+                    <h4 class="font-bold text-lg">Premium Tea</h4>
+                    <p class="text-sm opacity-70">For the soul</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-masala-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8 border-b border-gray-700 pb-8">
+                <div class="md:w-1/3">
+                    <a href="#" class="font-serif text-3xl font-bold text-white tracking-wider flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-masala-green"></i>
+                        LEAFHAUS
+                    </a>
+                    <p class="text-gray-400 text-sm">
+                        Leafhaus Malaysia Enterprise.<br>
+                        Multimedia University Alumni Startup.<br>
+                        Bukit Mertajam / Cyberjaya, Malaysia.
+                    </p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold text-lg mb-4 text-masala-saffron">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#mission" class="hover:text-white transition">Charity Run</a></li>
+                        <li><a href="https://tiktok.com/@leafhaus" class="hover:text-white transition">TikTok Shop</a></li>
+                        <li><a href="https://shopee.com.my" class="hover:text-white transition">Shopee</a></li>
+                        <li><a href="sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold text-lg mb-4 text-masala-saffron">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-4">Join the community and support the 10,000 cans challenge.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-masala-saffron transition"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-masala-saffron transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/60162569149" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 text-gray-500 text-sm">
+                &copy; 2025 Leafhaus Malaysia. Crafted by Kalla Deveshwara Rao (MMU).
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVITY SCRIPT -->
+    <script>
+        // Navbar scroll effect (ANNE'S FIX: Removed this because we want it white all the time now)
+        /*
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+            }
+        });
+        */
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // PROGRESS BAR ANIMATION (Simulated Data)
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentSales = 3450; // Update this manually or via API
+            const target = 10000;
+            const percentage = (currentSales / target) * 100;
+            
+            const progressBar = document.getElementById('progress-bar');
+            const salesText = document.getElementById('current-sales-text');
+            
+            // Animate after small delay
+            setTimeout(() => {
+                progressBar.style.width = percentage + "%";
+                
+                // Count up animation for text
+                let start = 0;
+                const duration = 2000;
+                const step = duration / currentSales;
+                
+                const timer = setInterval(() => {
+                    start += 50;
+                    if (start > currentSales) {
+                        start = currentSales;
+                        clearInterval(timer);
+                    }
+                    salesText.innerText = "Sold: " + start.toLocaleString();
+                }, 20);
+                
+            }, 500);
+        });
+    </script>
+</body>
+</html>
