@@ -23,7 +23,8 @@
     <!-- FONTS & ICONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Using Lato for a clean Sans Serif look, as requested -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -33,24 +34,29 @@
             theme: {
                 extend: {
                     colors: {
-                        'masala-saffron': '#D97706',
-                        'masala-dark': '#3E2723',
-                        'masala-gold': '#FFD700',
+                        // NEW MAIN GREEN COLOR: #133730
+                        'leafhaus-dark': '#133730', 
+                        // NEW ACCENT GOLD COLOR
+                        'leafhaus-gold': '#FFC300', 
+                        // Old colors renamed/adjusted for consistency
+                        'masala-saffron': '#D97706', // Used for secondary contrast (Orange/Brown tone)
                         'masala-cream': '#FFF8E1',
-                        'masala-green': '#2E7D32',
+                        'masala-green': '#2E7D32', // Used for Product 3 border
                         'matcha-green': '#88B04B',
                         'turmeric-yellow': '#FBC02D',
                     },
                     fontFamily: {
-                        'serif': ['Playfair Display', 'serif'],
-                        'sans': ['Lato', 'sans-serif'],
+                        // Enforce Sans Serif (Lato is already loaded and is a sans-serif font)
+                        'sans': ['Lato', 'sans-serif'], 
+                        'serif': ['Lato', 'sans-serif'], // Redirecting serif to sans for consistency
                     },
                 }
             }
         }
     </script>
 </head>
-<body class="bg-masala-cream text-masala-dark font-sans antialiased overflow-x-hidden">
+<!-- Applying new dark background and text colors -->
+<body class="bg-masala-cream text-leafhaus-dark font-sans antialiased overflow-x-hidden">
 
     <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
@@ -58,24 +64,26 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="font-serif text-3xl font-bold text-masala-dark tracking-wider flex items-center gap-2">
-                        <i class="fa-solid fa-leaf text-masala-green"></i>
+                    <!-- Logo color updated to the new main green: leafhaus-dark -->
+                    <a href="#" class="text-3xl font-black text-leafhaus-dark tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-leafhaus-gold"></i>
                         LEAFHAUS
                     </a>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-masala-dark hover:text-masala-saffron font-bold transition">The Story</a>
-                    <a href="#products" class="text-masala-dark hover:text-masala-saffron font-bold transition">The Drinks</a>
-                    <a href="#b2b" class="text-masala-dark hover:text-masala-saffron font-bold transition">Partners</a>
-                    <a href="#heritage" class="text-masala-dark hover:text-masala-saffron font-bold transition">Heritage Run</a>
-                    <a href="https://wa.me/60162569149" target="_blank" class="bg-masala-saffron text-white px-6 py-2 rounded-full font-bold hover:bg-masala-dark transition shadow-lg transform hover:scale-105">
+                    <a href="#about" class="text-leafhaus-dark hover:text-leafhaus-gold font-bold transition">The Story</a>
+                    <a href="#products" class="text-leafhaus-dark hover:text-leafhaus-gold font-bold transition">The Drinks</a>
+                    <a href="#b2b" class="text-leafhaus-dark hover:text-leafhaus-gold font-bold transition">Partners</a>
+                    <a href="#heritage" class="text-leafhaus-dark hover:text-leafhaus-gold font-bold transition">Heritage Run</a>
+                    <!-- Button color updated -->
+                    <a href="https://wa.me/60162569149" target="_blank" class="bg-leafhaus-gold text-leafhaus-dark px-6 py-2 rounded-full font-bold hover:bg-leafhaus-dark hover:text-white transition shadow-lg transform hover:scale-105">
                         Pre-Order Now
                     </a>
                 </div>
                 <!-- Mobile Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-masala-dark text-2xl focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-leafhaus-dark text-2xl focus:outline-none">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -84,10 +92,10 @@
         <!-- Mobile Menu Panel -->
         <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
             <div class="px-4 pt-2 pb-4 space-y-2 text-center">
-                <a href="#about" class="block py-2 text-masala-dark font-bold">The Story</a>
-                <a href="#products" class="block py-2 text-masala-dark font-bold">The Drinks</a>
-                <a href="#b2b" class="block py-2 text-masala-dark font-bold">Partners</a>
-                <a href="https://wa.me/60162569149" class="block py-2 text-masala-saffron font-bold">Pre-Order Now</a>
+                <a href="#about" class="block py-2 text-leafhaus-dark font-bold">The Story</a>
+                <a href="#products" class="block py-2 text-leafhaus-dark font-bold">The Drinks</a>
+                <a href="#b2b" class="block py-2 text-leafhaus-dark font-bold">Partners</a>
+                <a href="https://wa.me/60162569149" class="block py-2 text-leafhaus-gold font-bold">Pre-Order Now</a>
             </div>
         </div>
     </nav>
@@ -97,18 +105,20 @@
         <!-- Background -->
         <div class="absolute inset-0 z-0">
             <img src="assets/spices_bg.png" onerror="this.src='https://images.unsplash.com/photo-1596710629124-e1d515a4d339?q=80&w=2070&auto=format&fit=crop'" alt="Spices background" class="w-full h-full object-cover opacity-90">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-masala-cream"></div>
+            <!-- Overlay adjusted to use new dark green -->
+            <div class="absolute inset-0 bg-gradient-to-b from-leafhaus-dark/80 via-leafhaus-dark/60 to-masala-cream"></div>
         </div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg leading-tight">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-lg leading-tight">
                 World's First Halal<br>
-                <span class="text-masala-gold">Masala Tea in a Can</span>
+                <span class="text-leafhaus-gold">Masala Tea in a Can</span>
             </h1>
             <p class="text-xl md:text-2xl text-gray-100 mb-10 font-light max-w-3xl mx-auto drop-shadow-md leading-relaxed">
                 All the warmth of homemade masala tea now ready-to-drink, halal-friendly, and crafted with spices traditionally used for digestion, comfort, and everyday wellbeing.
             </p>
-            <a href="https://wa.me/60162569149?text=Hi%20Leafhaus!%20I%20want%20to%20Pre-Order" target="_blank" class="inline-block bg-masala-saffron text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-masala-saffron transition duration-300 shadow-xl border-2 border-masala-saffron">
+            <!-- Button color updated -->
+            <a href="https://wa.me/60162569149?text=Hi%20Leafhaus!%20I%20want%20to%20Pre-Order" target="_blank" class="inline-block bg-leafhaus-gold text-leafhaus-dark px-10 py-4 rounded-full font-extrabold text-lg hover:bg-white hover:text-leafhaus-dark transition duration-300 shadow-xl border-2 border-leafhaus-gold transform hover:scale-105">
                 Pre-Order Now!
             </a>
         </div>
@@ -117,38 +127,47 @@
     <!-- PAGE 3: THE QUESTION -->
     <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-5xl text-center">
-            <h3 class="text-masala-saffron font-bold uppercase tracking-widest mb-6 text-sm">Our Origin</h3>
-            <h2 class="font-serif text-3xl md:text-5xl font-bold text-masala-dark mb-8 leading-tight">
+            <!-- Color updated -->
+            <h3 class="text-leafhaus-gold font-bold uppercase tracking-widest mb-6 text-sm">Our Origin</h3>
+            <!-- Color updated -->
+            <h2 class="text-3xl md:text-5xl font-extrabold text-leafhaus-dark mb-8 leading-tight">
                 Leafhaus was born from one simple question:
             </h2>
-            <blockquote class="text-2xl md:text-3xl font-serif italic text-gray-600 mb-10 px-8 border-l-4 border-masala-gold inline-block">
+            <!-- Color updated -->
+            <blockquote class="text-2xl md:text-3xl font-extrabold italic text-gray-700 mb-10 px-8 border-l-4 border-leafhaus-gold inline-block">
                 "Why can't masala tea be as convenient as any canned drink, but still taste like home and stay halal friendly?"
             </blockquote>
             
             <div class="bg-masala-cream p-8 rounded-3xl mt-8 shadow-inner">
-                <h3 class="font-bold text-2xl text-masala-dark mb-4">Now it can!</h3>
+                <!-- Color updated -->
+                <h3 class="font-extrabold text-2xl text-leafhaus-dark mb-4">Now it can!</h3>
                 <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
                     From morning meetings to late-night mamak sessions, Leafhaus brings you ready-to-drink halal masala tea and comfort flavours in a can, wherever you are.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/60162569149" class="bg-masala-dark text-white px-8 py-3 rounded-full font-bold hover:bg-masala-saffron transition">Pre-Order Now!</a>
-                    <a href="#b2b" class="bg-transparent border-2 border-masala-dark text-masala-dark px-8 py-3 rounded-full font-bold hover:bg-masala-dark hover:text-white transition">Business & Bulk Orders</a>
+                    <!-- Button color updated -->
+                    <a href="https://wa.me/60162569149" class="bg-leafhaus-dark text-white px-8 py-3 rounded-full font-bold hover:bg-leafhaus-gold hover:text-leafhaus-dark transition transform hover:scale-105">Pre-Order Now!</a>
+                    <!-- Button color updated -->
+                    <a href="#b2b" class="bg-transparent border-2 border-leafhaus-dark text-leafhaus-dark px-8 py-3 rounded-full font-bold hover:bg-leafhaus-dark hover:text-white transition">Business & Bulk Orders</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PAGE 4: SOCIAL PROOF -->
-    <section class="py-20 bg-masala-dark text-white relative overflow-hidden">
+    <!-- Background color updated -->
+    <section class="py-20 bg-leafhaus-dark text-white relative overflow-hidden">
         <!-- Texture -->
         <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
         
         <div class="container mx-auto px-4 relative z-10 text-center">
-            <h2 class="font-serif text-4xl font-bold mb-6 text-masala-gold">From Home Idea to Sold-Out Favourite</h2>
+            <!-- Color updated -->
+            <h2 class="text-4xl font-extrabold mb-6 text-leafhaus-gold">From Home Idea to Sold-Out Favourite</h2>
             <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Our first batch sold out faster than we imagined - thanks to people who believed in a new kind of drink:
             </p>
-            <div class="inline-block border-2 border-masala-saffron px-6 py-3 rounded-lg text-masala-saffron font-bold tracking-widest text-lg mb-12">
+            <!-- Color updated -->
+            <div class="inline-block border-2 border-leafhaus-gold px-6 py-3 rounded-lg text-leafhaus-gold font-extrabold tracking-widest text-lg mb-12">
                 HALAL MASALA TEA IN A CAN, MADE IN MALAYSIA.
             </div>
             
@@ -156,14 +175,15 @@
             
             <div class="flex flex-wrap justify-center gap-6 md:gap-12 items-center opacity-80 grayscale hover:grayscale-0 transition-all duration-500 mb-12">
                 <!-- Logos (Text placeholders for now) -->
-                <span class="text-2xl font-bold font-serif">BERNAMA</span>
-                <span class="text-2xl font-bold font-serif">ASTRO ULAGAM</span>
-                <span class="text-2xl font-bold font-serif">ZESTIE</span>
-                <span class="text-2xl font-bold font-serif">KL FOODIE</span>
-                <span class="text-2xl font-bold font-serif">PENANG FOODIE</span>
+                <span class="text-2xl font-extrabold">BERNAMA</span>
+                <span class="text-2xl font-extrabold">ASTRO ULAGAM</span>
+                <span class="text-2xl font-extrabold">ZESTIE</span>
+                <span class="text-2xl font-extrabold">KL FOODIE</span>
+                <span class="text-2xl font-extrabold">PENANG FOODIE</span>
             </div>
 
-            <a href="https://wa.me/60162569149" class="bg-white text-masala-dark px-8 py-3 rounded-full font-bold hover:bg-masala-gold transition">Order Your Next Batch Now!</a>
+            <!-- Button color updated -->
+            <a href="https://wa.me/60162569149" class="bg-white text-leafhaus-dark px-8 py-3 rounded-full font-bold hover:bg-leafhaus-gold transition">Order Your Next Batch Now!</a>
         </div>
     </section>
 
@@ -171,7 +191,8 @@
     <section id="products" class="py-24 bg-masala-cream">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-masala-dark mb-4">Our Drinks</h2>
+                <!-- Color updated -->
+                <h2 class="text-4xl md:text-5xl font-extrabold text-leafhaus-dark mb-4">Our Drinks</h2>
                 <p class="text-gray-600 text-lg max-w-3xl mx-auto">
                     We're starting small, on purpose. Each Leafhaus drink is crafted to be halal-friendly, flavourful, and easy to enjoy anywhere.
                 </p>
@@ -182,41 +203,46 @@
                 <!-- Product 1 -->
                 <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300 border-t-8 border-masala-saffron flex flex-col">
                     <div class="text-xs font-bold text-masala-saffron uppercase tracking-wider mb-2">Signature Flavour</div>
-                    <h3 class="font-serif text-2xl font-bold text-masala-dark mb-4">Original Masala Tea</h3>
+                    <h3 class="text-2xl font-bold text-leafhaus-dark mb-4">Original Masala Tea</h3>
                     <div class="bg-orange-100 rounded-xl h-48 mb-6 flex items-center justify-center">
                         <i class="fa-solid fa-mug-hot text-6xl text-masala-saffron opacity-50"></i>
                     </div>
                     <p class="text-gray-600 mb-4 flex-grow">
                         The OG Leafhaus flavour! Bold masala tea with spices traditionally used to support digestion and warmth.
                     </p>
-                    <a href="https://wa.me/60162569149?text=Order%20Original%20Masala" class="w-full block text-center bg-masala-dark text-white py-3 rounded-xl font-bold hover:bg-masala-saffron transition">Pre-Order Now</a>
+                    <!-- Button color updated -->
+                    <a href="https://wa.me/60162569149?text=Order%20Original%20Masala" class="w-full block text-center bg-leafhaus-dark text-white py-3 rounded-xl font-bold hover:bg-masala-saffron transition transform hover:scale-105">Pre-Order Now</a>
                 </div>
 
                 <!-- Product 2 -->
-                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300 border-t-8 border-masala-gold flex flex-col">
-                    <div class="text-xs font-bold text-masala-gold uppercase tracking-wider mb-2">Fan Favourite</div>
-                    <h3 class="font-serif text-2xl font-bold text-masala-dark mb-4">Turmeric Milk</h3>
+                <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300 border-t-8 border-leafhaus-gold flex flex-col">
+                    <!-- Color updated -->
+                    <div class="text-xs font-bold text-leafhaus-gold uppercase tracking-wider mb-2">Fan Favourite</div>
+                    <!-- Color updated -->
+                    <h3 class="text-2xl font-bold text-leafhaus-dark mb-4">Turmeric Milk</h3>
                     <div class="bg-yellow-100 rounded-xl h-48 mb-6 flex items-center justify-center">
                         <i class="fa-solid fa-glass-water text-6xl text-turmeric-yellow opacity-50"></i>
                     </div>
                     <p class="text-gray-600 mb-4 flex-grow">
                         Golden turmeric milk inspired by healing, recovery, and wind-down nights. Creamy and often taken for joint comfort.
                     </p>
-                    <a href="https://wa.me/60162569149?text=Order%20Turmeric%20Milk" class="w-full block text-center bg-masala-dark text-white py-3 rounded-xl font-bold hover:bg-masala-gold hover:text-masala-dark transition">Pre-Order Now</a>
+                    <!-- Button color updated -->
+                    <a href="https://wa.me/60162569149?text=Order%20Turmeric%20Milk" class="w-full block text-center bg-leafhaus-dark text-white py-3 rounded-xl font-bold hover:bg-leafhaus-gold hover:text-leafhaus-dark transition transform hover:scale-105">Pre-Order Now</a>
                 </div>
 
                 <!-- Product 3 -->
                 <div class="bg-white rounded-3xl p-8 shadow-xl hover:-translate-y-2 transition duration-300 border-t-8 border-masala-green flex flex-col relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">COMING SOON</div>
                     <div class="text-xs font-bold text-masala-green uppercase tracking-wider mb-2">New Innovation</div>
-                    <h3 class="font-serif text-2xl font-bold text-masala-dark mb-4">Green Masala Tea</h3>
+                    <h3 class="text-2xl font-bold text-leafhaus-dark mb-4">Green Masala Tea</h3>
                     <div class="bg-green-100 rounded-xl h-48 mb-6 flex items-center justify-center">
                         <i class="fa-solid fa-leaf text-6xl text-matcha-green opacity-50"></i>
                     </div>
                     <p class="text-gray-600 mb-4 flex-grow">
                         A unique twist combining Japanese Matcha with Indian Masala spices. The fusion you didn't know you needed.
                     </p>
-                    <a href="https://wa.me/60162569149?text=Waitlist%20Green%20Masala" class="w-full block text-center border-2 border-masala-dark text-masala-dark py-3 rounded-xl font-bold hover:bg-masala-dark hover:text-white transition">Join Waitlist</a>
+                    <!-- Button color updated -->
+                    <a href="https://wa.me/60162569149?text=Waitlist%20Green%20Masala" class="w-full block text-center border-2 border-leafhaus-dark text-leafhaus-dark py-3 rounded-xl font-bold hover:bg-leafhaus-dark hover:text-white transition">Join Waitlist</a>
                 </div>
 
             </div>
@@ -226,7 +252,8 @@
                 <p class="text-gray-600 text-lg leading-relaxed mb-8">
                     Leafhaus crafts halal ready-to-drink wellness-inspired beverages. If you've been searching for halal masala tea for digestion, turmeric milk for recovery, or a unique matcha masala drink in a can, Leafhaus is made for you.
                 </p>
-                <a href="https://wa.me/60162569149" class="inline-block bg-masala-saffron text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-masala-dark transition">Pre-Order Leafhaus Now</a>
+                <!-- Button color updated -->
+                <a href="https://wa.me/60162569149" class="inline-block bg-leafhaus-gold text-leafhaus-dark px-8 py-3 rounded-full font-bold shadow-lg hover:bg-leafhaus-dark hover:text-white transition">Pre-Order Leafhaus Now</a>
             </div>
         </div>
     </section>
@@ -236,12 +263,14 @@
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
                 <div class="md:w-1/2">
-                    <h2 class="font-serif text-4xl md:text-6xl font-bold text-masala-dark leading-tight">
+                    <!-- Color updated -->
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-leafhaus-dark leading-tight">
                         Why Halal Masala Tea in a Can?
                     </h2>
                 </div>
                 <div class="md:w-1/2">
-                    <p class="text-xl text-gray-600 border-l-4 border-masala-saffron pl-6 py-2">
+                    <!-- Color updated -->
+                    <p class="text-xl text-gray-600 border-l-4 border-leafhaus-gold pl-6 py-2">
                         Most canned drinks are sweet, fizzy, and forgettable. Leafhaus is built around Muslim-friendly, flavour-first drinks that actually mean something to your culture and daily life.
                     </p>
                 </div>
@@ -250,27 +279,33 @@
             <!-- The "That Means" Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-gray-50 p-8 rounded-2xl text-center border hover:border-masala-saffron transition">
-                    <div class="w-16 h-16 bg-masala-saffron text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border hover:border-leafhaus-gold transition">
+                    <!-- Color updated -->
+                    <div class="w-16 h-16 bg-leafhaus-gold text-leafhaus-dark rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-xl">
                         <i class="fa-solid fa-hand-holding-heart"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-masala-dark mb-3">Halal-Friendly Formulation</h3>
+                    <!-- Color updated -->
+                    <h3 class="text-2xl font-bold text-leafhaus-dark mb-3">Halal-Friendly Formulation</h3>
                     <p class="text-gray-600">Ingredients and process chosen with Muslims in mind.</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-gray-50 p-8 rounded-2xl text-center border hover:border-masala-saffron transition">
-                    <div class="w-16 h-16 bg-masala-saffron text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border hover:border-leafhaus-gold transition">
+                    <!-- Color updated -->
+                    <div class="w-16 h-16 bg-leafhaus-gold text-leafhaus-dark rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-xl">
                         <i class="fa-solid fa-check-double"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-masala-dark mb-3">Clear & Honest Labelling</h3>
+                    <!-- Color updated -->
+                    <h3 class="text-2xl font-bold text-leafhaus-dark mb-3">Clear & Honest Labelling</h3>
                     <p class="text-gray-600">You know what you're drinking.</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-gray-50 p-8 rounded-2xl text-center border hover:border-masala-saffron transition">
-                    <div class="w-16 h-16 bg-masala-saffron text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border hover:border-leafhaus-gold transition">
+                    <!-- Color updated -->
+                    <div class="w-16 h-16 bg-leafhaus-gold text-leafhaus-dark rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-xl">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-masala-dark mb-3">Inclusive By Design</h3>
+                    <!-- Color updated -->
+                    <h3 class="text-2xl font-bold text-leafhaus-dark mb-3">Inclusive By Design</h3>
                     <p class="text-gray-600">Easy to share with friends, family, and colleagues.</p>
                 </div>
             </div>
@@ -278,19 +313,23 @@
             <div class="text-center mt-12">
                 <p class="text-lg text-gray-600 italic mb-8">When you pick up Leafhaus, you're not guessing. You're choosing a drink that respects your values and your taste buds.</p>
                 <div class="flex justify-center gap-4">
-                    <a href="https://wa.me/60162569149" class="bg-masala-dark text-white px-8 py-3 rounded-full font-bold hover:bg-masala-saffron transition">Pre-Order Halal Masala Tea</a>
-                    <a href="mailto:partner@leafhaus.my" class="border-2 border-masala-dark text-masala-dark px-8 py-3 rounded-full font-bold hover:bg-masala-dark hover:text-white transition">Export Enquiries</a>
+                    <!-- Button color updated -->
+                    <a href="https://wa.me/60162569149" class="bg-leafhaus-dark text-white px-8 py-3 rounded-full font-bold hover:bg-leafhaus-gold hover:text-leafhaus-dark transition transform hover:scale-105">Pre-Order Halal Masala Tea</a>
+                    <!-- Button color updated -->
+                    <a href="mailto:partner@leafhaus.my" class="border-2 border-leafhaus-dark text-leafhaus-dark px-8 py-3 rounded-full font-bold hover:bg-leafhaus-dark hover:text-white transition">Export Enquiries</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PAGE 9, 10, 11: THE STORY -->
-    <section class="py-24 bg-masala-dark text-white">
+    <!-- PAGE 9, 10, 11: THE STORY (Slicker Version) -->
+    <!-- Background color updated -->
+    <section class="py-24 bg-leafhaus-dark text-white">
         <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="font-serif text-4xl font-bold text-masala-gold mb-6">The Leafhaus Story</h2>
-            <p class="text-xl mb-8">Leafhaus is a Malaysian-born brand built on three things:</p>
-            <h3 class="text-3xl font-bold tracking-widest text-white mb-12 uppercase border-y-2 border-white/20 py-4 inline-block">
+            <!-- Color updated -->
+            <h2 class="text-4xl font-extrabold text-leafhaus-gold mb-6">The Leafhaus Story</h2>
+            <p class="text-xl mb-8 font-light">Leafhaus is a Malaysian-born brand built on three things:</p>
+            <h3 class="text-3xl font-extrabold tracking-widest text-leafhaus-gold mb-12 uppercase border-y-2 border-leafhaus-gold/40 py-4 inline-block">
                 Heritage &bull; Flavour &bull; Convenience
             </h3>
             
@@ -298,68 +337,84 @@
                 We grew up with masala tea and turmeric milk as comfort drinks after a long day, during deep conversations, after meals with family. As life got busier, we didn't always have time to boil water, crush spices, and stand over the stove.
             </p>
 
-            <div class="bg-white/10 p-10 rounded-3xl backdrop-blur-sm border border-white/10 mb-12">
-                <h4 class="font-serif text-2xl font-bold mb-8 text-masala-saffron">So we asked ourselves:</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                    <div>
-                        <i class="fa-solid fa-mug-hot text-masala-gold mb-4 text-2xl"></i>
-                        <p class="font-bold">What if you could get that same warmth and flavour... in a can?</p>
+            <!-- START: The "so we asked ourselves" portion - SPICED UP! (Cantik and Sybau) -->
+            <div class="bg-white p-10 rounded-3xl shadow-2xl border-b-8 border-leafhaus-gold mb-12">
+                <!-- Color updated -->
+                <h4 class="text-3xl font-extrabold mb-10 text-leafhaus-dark">So we asked ourselves... The Big Questions:</h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    
+                    <div class="flex flex-col items-center p-4 bg-masala-cream rounded-xl shadow-inner border-b-4 border-leafhaus-gold/50">
+                        <i class="fa-solid fa-mug-hot text-leafhaus-gold mb-4 text-3xl transform scale-x-[-1]"></i>
+                        <!-- Color updated -->
+                        <p class="font-bold text-leafhaus-dark text-lg leading-snug">What if you could get that same warmth and authentic flavour... in a can?</p>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-hand-holding-heart text-masala-gold mb-4 text-2xl"></i>
-                        <p class="font-bold">What if it was convenient and still respectful of Muslim dietary needs?</p>
+                    
+                    <div class="flex flex-col items-center p-4 bg-masala-cream rounded-xl shadow-inner border-b-4 border-leafhaus-gold/50">
+                        <i class="fa-solid fa-hand-holding-heart text-leafhaus-gold mb-4 text-3xl"></i>
+                        <!-- Color updated -->
+                        <p class="font-bold text-leafhaus-dark text-lg leading-snug">What if it was convenient and still respectful of Muslim dietary needs?</p>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-store text-masala-gold mb-4 text-2xl"></i>
-                        <p class="font-bold">What if masala tea could sit beside your favourite sodas and coffees in the chiller?</p>
+                    
+                    <div class="flex flex-col items-center p-4 bg-masala-cream rounded-xl shadow-inner border-b-4 border-leafhaus-gold/50">
+                        <i class="fa-solid fa-store text-leafhaus-gold mb-4 text-3xl"></i>
+                        <!-- Color updated -->
+                        <p class="font-bold text-leafhaus-dark text-lg leading-snug">What if masala tea could sit beside your favourite sodas in the chiller section?</p>
                     </div>
                 </div>
             </div>
+            <!-- END: The "so we asked ourselves" portion -->
 
-            <h3 class="font-serif text-4xl font-bold mb-6">Leafhaus is our answer.</h3>
-            <p class="text-xl text-gray-300 mb-10">A bridge between tradition and modern life, packed into every can.</p>
+            <h3 class="text-4xl font-extrabold mb-6">Leafhaus is our answer.</h3>
+            <p class="text-xl text-gray-300 mb-10 font-light">A bridge between tradition and modern life, packed into every can.</p>
             
-            <a href="https://wa.me/60162569149" class="bg-masala-gold text-masala-dark px-10 py-4 rounded-full font-bold text-lg hover:bg-white transition">Taste The Story & Pre-Order Now</a>
+            <!-- Button color updated -->
+            <a href="https://wa.me/60162569149" class="bg-leafhaus-gold text-leafhaus-dark px-10 py-4 rounded-full font-extrabold text-lg hover:bg-white transition shadow-xl transform hover:scale-105">Taste The Story & Pre-Order Now</a>
         </div>
     </section>
 
     <!-- PAGE 12: MOMENTS -->
     <section class="py-24 bg-masala-cream">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="font-serif text-4xl font-bold text-masala-dark mb-4">Your Daily Leafhaus Moments</h2>
+            <!-- Color updated -->
+            <h2 class="text-4xl font-extrabold text-leafhaus-dark mb-4">Your Daily Leafhaus Moments</h2>
             <p class="text-gray-600 mb-16">Leafhaus is for real life not just "special occasions". Here's how people use it:</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 <!-- Moment 1 -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-leafhaus-gold">
                     <div class="h-40 bg-orange-100 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fa-solid fa-sun text-5xl text-masala-saffron"></i>
                     </div>
-                    <h3 class="font-bold text-xl text-masala-dark mb-2">Morning Start</h3>
+                    <!-- Color updated -->
+                    <h3 class="font-bold text-xl text-leafhaus-dark mb-2">Morning Start</h3>
                     <p class="text-sm text-gray-600">Swap your usual coffee for a can of Original Masala Tea—gentle caffeine, warm spices, and a calmer kickstart.</p>
                 </div>
                 <!-- Moment 2 -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-leafhaus-gold">
                     <div class="h-40 bg-blue-100 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fa-solid fa-laptop-code text-5xl text-blue-800"></i>
                     </div>
-                    <h3 class="font-bold text-xl text-masala-dark mb-2">Office & Study Mode</h3>
+                    <!-- Color updated -->
+                    <h3 class="font-bold text-xl text-leafhaus-dark mb-2">Office & Study Mode</h3>
                     <p class="text-sm text-gray-600">Keep a can of Masala Tea or Turmeric Milk at your desk for long meetings, deadlines, and exam prep.</p>
                 </div>
                 <!-- Moment 3 -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-leafhaus-gold">
                     <div class="h-40 bg-green-100 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fa-solid fa-comments text-5xl text-masala-green"></i>
                     </div>
-                    <h3 class="font-bold text-xl text-masala-dark mb-2">Mamak Nights</h3>
+                    <!-- Color updated -->
+                    <h3 class="font-bold text-xl text-leafhaus-dark mb-2">Mamak Nights</h3>
                     <p class="text-sm text-gray-600">Not in the mood for another teh ais? Bring Leafhaus, or enjoy it on the way home.</p>
                 </div>
                 <!-- Moment 4 -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-leafhaus-gold">
                     <div class="h-40 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
                         <i class="fa-solid fa-plane text-5xl text-gray-600"></i>
                     </div>
-                    <h3 class="font-bold text-xl text-masala-dark mb-2">Travel & On-the-Go</h3>
+                    <!-- Color updated -->
+                    <h3 class="font-bold text-xl text-leafhaus-dark mb-2">Travel & On-the-Go</h3>
                     <p class="text-sm text-gray-600">Road trips, flights, errands—no kettle, no mess. Just open, sip, and go.</p>
                 </div>
             </div>
@@ -367,49 +422,63 @@
     </section>
 
     <!-- PAGE 13: INTERSTITIAL CTA -->
-    <section class="py-20 bg-masala-saffron text-white text-center">
+    <!-- Background color updated -->
+    <section class="py-20 bg-leafhaus-gold text-leafhaus-dark text-center">
         <div class="container mx-auto px-4">
-            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Masala Tea, Anywhere.</h2>
-            <p class="text-xl md:text-2xl font-light mb-10 opacity-90">Drink The Masala & Forget All Your Masalah!</p>
-            <a href="https://wa.me/60162569149" class="bg-white text-masala-saffron px-10 py-4 rounded-full font-bold text-lg hover:bg-masala-dark hover:text-white transition shadow-xl">Stock Up Now</a>
+            <!-- Color updated -->
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Masala Tea, Anywhere.</h2>
+            <p class="text-xl md:text-2xl font-bold mb-10 opacity-90">Drink The Masala & Forget All Your Masalah!</p>
+            <!-- Button color updated -->
+            <a href="https://wa.me/60162569149" class="bg-leafhaus-dark text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-leafhaus-dark transition shadow-xl transform hover:scale-105">Stock Up Now</a>
         </div>
     </section>
 
     <!-- PAGE 14: B2B SECTION -->
     <section id="b2b" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="bg-masala-dark rounded-3xl p-8 md:p-16 text-white relative overflow-hidden">
+            <!-- Background color updated -->
+            <div class="bg-leafhaus-dark rounded-3xl p-8 md:p-16 text-white relative overflow-hidden shadow-2xl">
                 <!-- Decor -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-masala-gold rounded-full opacity-10 blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+                <!-- Color updated -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-leafhaus-gold rounded-full opacity-10 blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
                 <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6 text-masala-gold">Stock Leafhaus at Your Outlet</h2>
+                        <!-- Color updated -->
+                        <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-leafhaus-gold">Stock Leafhaus at Your Outlet</h2>
                         <p class="text-gray-300 mb-6 text-lg">
                             Looking for something new for your chiller - beyond the usual sodas and bottled teas? Leafhaus delivers a unique halal masala tea range your customers will remember.
                         </p>
                         <ul class="space-y-4 mb-8">
-                            <li class="flex items-center"><i class="fa-solid fa-check text-masala-green mr-3"></i> Reseller / distributor pricing</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-masala-green mr-3"></i> Volume deals</li>
-                            <li class="flex items-center"><i class="fa-solid fa-check text-masala-green mr-3"></i> Collaborative marketing support</li>
+                            <!-- Color updated -->
+                            <li class="flex items-center"><i class="fa-solid fa-check text-leafhaus-gold mr-3"></i> Reseller / distributor pricing</li>
+                            <!-- Color updated -->
+                            <li class="flex items-center"><i class="fa-solid fa-check text-leafhaus-gold mr-3"></i> Volume deals</li>
+                            <!-- Color updated -->
+                            <li class="flex items-center"><i class="fa-solid fa-check text-leafhaus-gold mr-3"></i> Collaborative marketing support</li>
                         </ul>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="mailto:partner@leafhaus.my" class="bg-masala-gold text-masala-dark px-6 py-3 rounded-full font-bold hover:bg-white transition text-center">Enquire Partnerships</a>
+                            <!-- Button color updated -->
+                            <a href="mailto:partner@leafhaus.my" class="bg-leafhaus-gold text-leafhaus-dark px-6 py-3 rounded-full font-bold hover:bg-white transition text-center transform hover:scale-105">Enquire Partnerships</a>
                         </div>
                     </div>
                     <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/10">
-                        <h3 class="font-bold text-xl mb-6">We supply to:</h3>
+                        <!-- Color updated -->
+                        <h3 class="font-bold text-xl mb-6 text-leafhaus-gold">We supply to:</h3>
                         <div class="space-y-6">
                             <div>
-                                <h4 class="font-bold text-masala-saffron"><i class="fa-solid fa-shop mr-2"></i> Cafés & Restaurants</h4>
+                                <!-- Color updated -->
+                                <h4 class="font-bold text-leafhaus-gold"><i class="fa-solid fa-shop mr-2"></i> Cafés & Restaurants</h4>
                                 <p class="text-sm text-gray-400">Add Leafhaus as a signature canned drink.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-masala-saffron"><i class="fa-solid fa-basket-shopping mr-2"></i> Retailers & Mini Marts</h4>
+                                <!-- Color updated -->
+                                <h4 class="font-bold text-leafhaus-gold"><i class="fa-solid fa-basket-shopping mr-2"></i> Retailers & Mini Marts</h4>
                                 <p class="text-sm text-gray-400">Offer a halal masala tea in a can.</p>
                             </div>
                             <div>
-                                <h4 class="font-bold text-masala-saffron"><i class="fa-solid fa-truck-fast mr-2"></i> Distributors</h4>
+                                <!-- Color updated -->
+                                <h4 class="font-bold text-leafhaus-gold"><i class="fa-solid fa-truck-fast mr-2"></i> Distributors</h4>
                                 <p class="text-sm text-gray-400">Help us grow across Malaysia and beyond.</p>
                             </div>
                         </div>
@@ -422,7 +491,8 @@
     <!-- PAGE 15: HERITAGE RUN -->
     <section id="heritage" class="py-24 bg-masala-cream">
         <div class="container mx-auto px-4 text-center max-w-4xl">
-            <h2 class="font-serif text-4xl font-bold text-masala-dark mb-10">Leafhaus' Heritage Run</h2>
+            <!-- Color updated -->
+            <h2 class="text-4xl font-extrabold text-leafhaus-dark mb-10">Leafhaus' Heritage Run</h2>
             
             <!-- Poster Placeholder -->
             <div class="bg-gray-300 rounded-2xl h-96 w-full flex items-center justify-center shadow-inner mb-8">
@@ -440,53 +510,67 @@
     <!-- PAGE 16: COLLAB -->
     <section class="py-20 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="font-serif text-3xl font-bold text-masala-dark mb-4">Collab with Leafhaus</h2>
+            <!-- Color updated -->
+            <h2 class="text-3xl font-bold text-leafhaus-dark mb-4">Collab with Leafhaus</h2>
             <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
                 If your brand loves flavour, culture, or storytelling, we'd love to explore:
             </p>
             <div class="flex flex-wrap justify-center gap-4 mb-10">
-                <span class="bg-masala-cream text-masala-dark px-6 py-2 rounded-full font-bold border border-masala-gold">Limited-edition flavours</span>
-                <span class="bg-masala-cream text-masala-dark px-6 py-2 rounded-full font-bold border border-masala-gold">Event collaborations</span>
-                <span class="bg-masala-cream text-masala-dark px-6 py-2 rounded-full font-bold border border-masala-gold">Co-branded gift packs</span>
+                <!-- Color updated -->
+                <span class="bg-masala-cream text-leafhaus-dark px-6 py-2 rounded-full font-bold border border-leafhaus-gold">Limited-edition flavours</span>
+                <!-- Color updated -->
+                <span class="bg-masala-cream text-leafhaus-dark px-6 py-2 rounded-full font-bold border border-leafhaus-gold">Event collaborations</span>
+                <!-- Color updated -->
+                <span class="bg-masala-cream text-leafhaus-dark px-6 py-2 rounded-full font-bold border border-leafhaus-gold">Co-branded gift packs</span>
             </div>
-            <a href="https://wa.me/60162569149" class="inline-block border-2 border-masala-dark text-masala-dark px-8 py-3 rounded-full font-bold hover:bg-masala-dark hover:text-white transition">Chat with Our Team</a>
+            <!-- Button color updated -->
+            <a href="https://wa.me/60162569149" class="inline-block border-2 border-leafhaus-dark text-leafhaus-dark px-8 py-3 rounded-full font-bold hover:bg-leafhaus-dark hover:text-white transition">Chat with Our Team</a>
         </div>
     </section>
 
     <!-- PAGE 17: CAREERS -->
-    <section class="py-24 bg-masala-dark text-white text-center">
+    <!-- Background color updated -->
+    <section class="py-24 bg-leafhaus-dark text-white text-center">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="font-serif text-4xl font-bold text-white mb-6">Join the Leafhaus Sales Team</h2>
+            <h2 class="text-4xl font-extrabold text-white mb-6">Join the Leafhaus Sales Team</h2>
             <p class="text-xl text-gray-300 mb-10">
                 We're growing - and we're looking for people who believe in Leafhaus and love connecting with others.
             </p>
             
-            <div class="bg-white/5 p-8 rounded-2xl mb-10 text-left mx-auto inline-block w-full">
-                <p class="font-bold text-masala-gold mb-4">If you:</p>
+            <div class="bg-white/5 p-8 rounded-2xl mb-10 text-left mx-auto inline-block w-full border border-leafhaus-gold/50">
+                <!-- Color updated -->
+                <p class="font-bold text-leafhaus-gold mb-4">If you:</p>
                 <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center"><i class="fa-solid fa-circle text-xs text-masala-saffron mr-3"></i> Enjoy talking to people and building relationships</li>
-                    <li class="flex items-center"><i class="fa-solid fa-circle text-xs text-masala-saffron mr-3"></i> Want to help place Leafhaus in more cafés, shops, and events</li>
-                    <li class="flex items-center"><i class="fa-solid fa-circle text-xs text-masala-saffron mr-3"></i> Are excited about growing a Malaysian beverage brand</li>
+                    <!-- Color updated -->
+                    <li class="flex items-center"><i class="fa-solid fa-circle text-xs text-leafhaus-gold mr-3"></i> Enjoy talking to people and building relationships</li>
+                    <!-- Color updated -->
+                    <li class="flex items-center"><i class="fa-solid fa-circle text-xs text-leafhaus-gold mr-3"></i> Want to help place Leafhaus in more cafés, shops, and events</li>
+                    <!-- Color updated -->
+                    <li class="flex items-center"><i class="fa-solid fa-circle text-xs text-leafhaus-gold mr-3"></i> Are excited about growing a Malaysian beverage brand</li>
                 </ul>
             </div>
             
             <p class="text-gray-400 mb-8 text-sm">We're especially looking for Sales Executives and on-ground brand builders.</p>
             
-            <a href="mailto:careers@leafhaus.my" class="inline-block bg-white text-masala-dark px-10 py-4 rounded-full font-bold hover:bg-masala-gold transition">Email Your CV</a>
+            <!-- Button color updated -->
+            <a href="mailto:careers@leafhaus.my" class="inline-block bg-white text-leafhaus-dark px-10 py-4 rounded-full font-bold hover:bg-leafhaus-gold transition transform hover:scale-105">Email Your CV</a>
         </div>
     </section>
 
     <!-- PAGE 18: FAQ -->
     <section id="faq" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="font-serif text-3xl font-bold text-center text-masala-dark mb-12">Frequently Asked Questions</h2>
+            <!-- Color updated -->
+            <h2 class="text-3xl font-bold text-center text-leafhaus-dark mb-12">Frequently Asked Questions</h2>
             
             <div class="space-y-4">
                 <!-- Q1 -->
                 <div class="border border-gray-200 rounded-xl p-5 cursor-pointer hover:shadow-md transition bg-gray-50" onclick="toggleFaq('faq1')">
-                    <div class="flex justify-between items-center font-bold text-masala-dark text-lg">
+                    <!-- Color updated -->
+                    <div class="flex justify-between items-center font-bold text-leafhaus-dark text-lg">
                         <span>Are Leafhaus drinks halal certified?</span>
-                        <i class="fa-solid fa-chevron-down text-masala-saffron"></i>
+                        <!-- Color updated -->
+                        <i class="fa-solid fa-chevron-down text-leafhaus-gold"></i>
                     </div>
                     <div id="faq1" class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4">
                         Yes. Leafhaus drinks are officially halal certified, so you can enjoy our masala tea and turmeric milk with full peace of mind.
@@ -495,9 +579,11 @@
 
                 <!-- Q2 -->
                 <div class="border border-gray-200 rounded-xl p-5 cursor-pointer hover:shadow-md transition bg-gray-50" onclick="toggleFaq('faq2')">
-                    <div class="flex justify-between items-center font-bold text-masala-dark text-lg">
+                    <!-- Color updated -->
+                    <div class="flex justify-between items-center font-bold text-leafhaus-dark text-lg">
                         <span>What flavours do you have now?</span>
-                        <i class="fa-solid fa-chevron-down text-masala-saffron"></i>
+                        <!-- Color updated -->
+                        <i class="fa-solid fa-chevron-down text-leafhaus-gold"></i>
                     </div>
                     <div id="faq2" class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4">
                         Right now we have Original Masala Tea and Turmeric Milk available. Green Matcha Masala Tea is coming soon. But all 3 are open for Pre Order.
@@ -506,9 +592,11 @@
 
                 <!-- Q3 -->
                 <div class="border border-gray-200 rounded-xl p-5 cursor-pointer hover:shadow-md transition bg-gray-50" onclick="toggleFaq('faq3')">
-                    <div class="flex justify-between items-center font-bold text-masala-dark text-lg">
+                    <!-- Color updated -->
+                    <div class="flex justify-between items-center font-bold text-leafhaus-dark text-lg">
                         <span>Are these health drinks or medicine?</span>
-                        <i class="fa-solid fa-chevron-down text-masala-saffron"></i>
+                        <!-- Color updated -->
+                        <i class="fa-solid fa-chevron-down text-leafhaus-gold"></i>
                     </div>
                     <div id="faq3" class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4">
                         Leafhaus drinks are inspired by traditional recipes that use spices for digestion, healing and everyday comfort, but they are not medicine. Think of them as halal friendly wellness-style drinks in a can, not a replacement for medical treatment.
@@ -517,9 +605,11 @@
 
                 <!-- Q4 -->
                 <div class="border border-gray-200 rounded-xl p-5 cursor-pointer hover:shadow-md transition bg-gray-50" onclick="toggleFaq('faq4')">
-                    <div class="flex justify-between items-center font-bold text-masala-dark text-lg">
+                    <!-- Color updated -->
+                    <div class="flex justify-between items-center font-bold text-leafhaus-dark text-lg">
                         <span>How do I order?</span>
-                        <i class="fa-solid fa-chevron-down text-masala-saffron"></i>
+                        <!-- Color updated -->
+                        <i class="fa-solid fa-chevron-down text-leafhaus-gold"></i>
                     </div>
                     <div id="faq4" class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4">
                         Easy. Just WhatsApp us to Pre-order Original Masala Tea or Turmeric Milk, or join the waitlist for Green Matcha Masala Tea.
@@ -528,9 +618,11 @@
 
                 <!-- Q5 -->
                 <div class="border border-gray-200 rounded-xl p-5 cursor-pointer hover:shadow-md transition bg-gray-50" onclick="toggleFaq('faq5')">
-                    <div class="flex justify-between items-center font-bold text-masala-dark text-lg">
+                    <!-- Color updated -->
+                    <div class="flex justify-between items-center font-bold text-leafhaus-dark text-lg">
                         <span>Do you offer bulk or outlet supply?</span>
-                        <i class="fa-solid fa-chevron-down text-masala-saffron"></i>
+                        <!-- Color updated -->
+                        <i class="fa-solid fa-chevron-down text-leafhaus-gold"></i>
                     </div>
                     <div id="faq5" class="hidden mt-4 text-gray-600 leading-relaxed border-t pt-4">
                         Yes. We supply to cafes, shops, resellers and distributors. You can contact our B2B WhatsApp or email us for pricing and details.
@@ -541,12 +633,14 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-masala-dark text-white pt-16 pb-8 border-t border-white/10">
+    <!-- Background color updated -->
+    <footer class="bg-leafhaus-dark text-white pt-16 pb-8 border-t border-white/10">
         <div class="container mx-auto px-4 text-center md:text-left">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div class="col-span-1 md:col-span-2">
-                    <a href="#" class="font-serif text-3xl font-bold text-white tracking-wider flex items-center justify-center md:justify-start gap-2 mb-4">
-                        <i class="fa-solid fa-leaf text-masala-green"></i>
+                    <!-- Logo color updated -->
+                    <a href="#" class="text-3xl font-bold text-white tracking-wider flex items-center justify-center md:justify-start gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-leafhaus-gold"></i>
                         LEAFHAUS
                     </a>
                     <p class="text-gray-400 text-sm max-w-sm mx-auto md:mx-0">
@@ -557,7 +651,8 @@
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-masala-gold mb-4">Quick Links</h4>
+                    <!-- Color updated -->
+                    <h4 class="font-bold text-leafhaus-gold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="#about" class="hover:text-white transition">Our Story</a></li>
                         <li><a href="#products" class="hover:text-white transition">Drinks</a></li>
@@ -566,9 +661,10 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-masala-gold mb-4">Contact</h4>
+                    <!-- Color updated -->
+                    <h4 class="font-bold text-leafhaus-gold mb-4">Contact</h4>
                     <div class="flex justify-center md:justify-start space-x-4 mb-4">
-                        <a href="https://tiktok.com/@leafhaus" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-masala-saffron transition"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://tiktok.com/@leafhaus" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-leafhaus-gold hover:text-leafhaus-dark transition"><i class="fa-brands fa-tiktok"></i></a>
                         <a href="https://instagram.com/leafhaus" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 transition"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://wa.me/60162569149" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
